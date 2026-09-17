@@ -9,9 +9,9 @@ An investigation into the use of databases with FastAPI, as part of ongoing cour
 
 ## Running the Files Locally
 To set up the environments:
-- Run `pip install`
 - Create a virtual environment by running `python3 -m venv fastapienv`
 - Start up the virtual environment with `source fastapienv/bin/activate`
+- Run `pip install`
 
 To run `main.py`
 - Run `uvicorn main:app --reload`
