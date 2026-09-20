@@ -13,5 +13,5 @@ To set up the environments:
 - Start up the virtual environment with `source fastapienv/bin/activate`
 - Run `pip install`
 
-To run `main.py`
+To run `database.py`
 - Run `uvicorn main:app --reload`
