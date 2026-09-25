@@ -22,4 +22,5 @@ To set up the environments:
 To run `database.py`
 - Ensure you have sqlite3 installed
 - Create a database file by running `sqlite3 todosapp.db`
+- Create your own `user_secrets.py` file, with a 'secret_hex_key' value. You can use the `openssl rand -hex 32` in the terminal to create a string value.
 - Run `uvicorn main:app --reload`
