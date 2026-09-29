@@ -6,7 +6,7 @@
 - [Running the Files Locally](#running-the-files-locally)
 
 ## Description
-An investigation into the use of databases with FastAPI, as part of ongoing coursework for [Eric Roby's Udemy course](https://www.udemy.com/course/fastapi-the-complete-course). The application demonstrates the use of authorization and authentication, as well as examples of connection to database options for Sqlite3, Postgres and MySQL
+An investigation into the use of databases with FastAPI, as part of ongoing coursework for [Eric Roby's Udemy course](https://www.udemy.com/course/fastapi-the-complete-course). The application demonstrates the use of authorization and authentication, as well as examples of connection to database options for Sqlite3, Postgres and MySQL, Alembic migrations and basic uses of PyTest.
 
 ## Example Screenshots
 <img width="1416" height="681" alt="Screenshot 2026-09-25 at 10 59 06" src="https://github.com/user-attachments/assets/94072ba0-6a48-4699-bff8-fcbe03d65afe" />
