@@ -1,11 +1,15 @@
 from fastapi import FastAPI
-import models
-from database import engine
-from routers import admin, auth, todos, users
+from .models import Base
+from .database import engine
+from .routers import admin, auth, todos, users
 
 app = FastAPI()
 
-models.Base.metadata.create_all(bind=engine)
+Base.metadata.create_all(bind=engine)
+
+@app.get("/health")
+def health_check():
+    return {"status": "ok"}
 
 app.include_router(admin.router)
 app.include_router(auth.router)

@@ -4,6 +4,7 @@
 - [Description](#description)
 - [Example Screenshots](#example-screenshots)
 - [Running the Files Locally](#running-the-files-locally)
+- [Running Unit Tests](#-running-unit-tests)
 
 ## Description
 An investigation into the use of databases with FastAPI, as part of ongoing coursework for [Eric Roby's Udemy course](https://www.udemy.com/course/fastapi-the-complete-course). The application demonstrates the use of authorization and authentication, as well as examples of connection to database options for Sqlite3, Postgres and MySQL, Alembic migrations and basic uses of PyTest.
@@ -20,9 +21,13 @@ To set up the environments:
 - Run `pip install`
 
 To run `database.py`
-- Create your own `user_secrets.py` file, with a 'secret_hex_key' value. You can use the `openssl rand -hex 32` in the terminal to create a string value.
+- Create your own `secret_hex_key` value in `auth.py`. You can use the `openssl rand -hex 32` in the terminal to create a string value.
 - Ensure you have sqlite3/postgres/MySQL installed
 - To use it with sqlite3, create a database file by running `sqlite3 todosapp.db`. Remove the comment tag for the sqlite3 connection in `database.py` (make sure the other connection options are commented out)
 - To use it with postgres, comment out the other options, remove the comment tag for the postgres option and fill out the URL correctly
 - To use it with MySQL, comment out the other options, remove the comment for the MySQL option and fill out the URL correctly
 - Run `uvicorn main:app --reload`
+
+## Running Unit Tests
+- Ensure that you have run `pip install` to install `pytest` and `pytest-asyncio`
+- Run `pytest`
