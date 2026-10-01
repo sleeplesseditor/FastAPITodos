@@ -3,12 +3,15 @@ from .models import Base
 from .database import engine
 from .routers import admin, auth, todos, users
 from fastapi.templating import Jinja2Templates
+from fastapi.staticfiles import StaticFiles
 
 app = FastAPI()
 
 Base.metadata.create_all(bind=engine)
 
 templates = Jinja2Templates(directory="FastAPITodos/templates")
+
+app.mount("/static", StaticFiles(directory="FastAPITodos/static"), name="static")
 
 @app.get("/")
 def test(request: Request):
