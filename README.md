@@ -14,6 +14,8 @@ An investigation into the use of databases with FastAPI, as part of ongoing cour
 
 <img width="1392" height="668" alt="Screenshot 2026-09-22 at 11 09 00" src="https://github.com/user-attachments/assets/87ceeb0f-9c1b-4662-81a6-5259680b2522" />
 
+<img width="1916" height="710" alt="Screenshot 2026-10-01 at 17 46 43" src="https://github.com/user-attachments/assets/d9403cc3-970e-4176-9857-356423200eb1" />
+
 ## Running the Files Locally
 To set up the environments:
 - Create a virtual environment by running `python3 -m venv fastapienv`
