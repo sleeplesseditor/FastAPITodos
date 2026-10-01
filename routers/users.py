@@ -1,7 +1,7 @@
 from fastapi import APIRouter, Depends, HTTPException, Path
 from starlette import status
 from pydantic import BaseModel, Field
-from ..models import Todos, Users
+from ..models import Users
 from ..database import SessionLocal
 from typing import Annotated
 from sqlalchemy.orm import Session

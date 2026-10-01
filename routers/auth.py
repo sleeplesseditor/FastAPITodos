@@ -1,8 +1,10 @@
 from datetime import timedelta, datetime, timezone
-from fastapi import APIRouter, Depends, HTTPException
+from fastapi import APIRouter, Depends, HTTPException, Request
 from fastapi.security import OAuth2PasswordRequestForm, OAuth2PasswordBearer
 from pydantic import BaseModel
 from starlette import status
+from starlette.templating import Jinja2Templates
+
 from ..models import Users
 from passlib.context import CryptContext
 from typing import Annotated
@@ -42,6 +44,19 @@ def get_db():
         db.close()
 
 db_dependency = Annotated[Session, Depends(get_db)]
+
+templates = Jinja2Templates(directory="FastAPITodos/templates")
+
+### Pages ###
+@router.get("/login-page")
+def render_login_page(request: Request):
+    return templates.TemplateResponse(request=request, name="login.html", context={})
+
+@router.get("/register-page")
+def render_register_page(request: Request):
+    return templates.TemplateResponse(request=request, name="register.html", context={})
+
+### Endpoints ###
 
 def authenticate_user(username: str, password: str, db):
     user = db.query(Users).filter(Users.username == username).first()
